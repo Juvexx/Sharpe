@@ -3,4 +3,4 @@ Sec 2 refers to the simulation Section 4.1 and additional results to validate th
 
 In Section 2, you can directly run 'Comparemu.R', 'CompareQ.R', 'CompareSigma.R' and 'basic.R' to obtain the simulation results under 1000 repetitions.
 
-In Section 3, you can directly run 'basic.R' and 'mucase.R' tp obtain the simulation results.
+In Section 3, you can directly run 'basic.R' and 'mucase.R' to obtain the simulation results.
