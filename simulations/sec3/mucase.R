@@ -66,7 +66,7 @@ else {
 if (selectmu==1){
     cat(length(mu0))
     cat(length(one))
-    mu=mu0+2*one+sqrt(p)*c(1,rep(0,p-1))
+    mu=p^(0.25)*mu0+2*one
     muname='mu3'
 }
 else {
