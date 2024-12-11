@@ -47,10 +47,11 @@ r_barpre=apply(Xpre,2,mean)
 npre=nrow(Xpre)
 Q0=(t(Xpre-rep(1,npre)%*%t(r_barpre))%*%(Xpre-rep(1,npre)%*%t(r_barpre))/npre)
 store=eigen(Q0)
-store$values[store$values>9]=9
-Q0=store$vectors%*%diag(store$values)%*%t(store$vectors)
-Q0_inverse_half=store$vectors%*%diag(1/sqrt(store$values))%*%t(store$vectors)
-Q0_inverse=store$vectors%*%diag(1/(store$values))%*%t(store$vectors)
+store$values[1]=0
+Q0diag=diag(store$vectors%*%diag(store$values)%*%t(store$vectors))
+Q0=diag(Q0diag)
+Q0_inverse_half=diag(Q0diag^(-0.5))
+Q0_inverse=diag(Q0diag^(-1))
 
 for (i in 0:125){
   cat('\n ')
@@ -173,19 +174,20 @@ for (i in 0:125){
 }
 
 
+
 Result_day=cbind(Rolling_time,Result_day)
 colnames(Result_day)=c('Rolling_time','Optimal','standard','diag',(1:30)/10)
 # Result_day[,9][1:3]
 # Result_day[,1][1:3]
 
-
-
-write.table(Result_day,'meanvarianceunknown/year4/resultday.txt',row.names = FALSE)
-write.table(cbind(Rolling_time_month,q_id_month),'meanvarianceunknown/year4/q_id_month.txt',row.names = FALSE)
-write.table(cbind(Rolling_time_month,q_diag_month),'meanvarianceunknown/year4/q_diag_month.txt',row.names = FALSE)
+getwd()
+dir.create('meanvarianceunknown/year4/')
+write.table(Result_day,'meanvarianceunknown/year4/resultday1.txt',row.names = FALSE)
+# write.table(cbind(Rolling_time_month,q_id_month),'meanvarianceunknown/year4/q_id_month.txt',row.names = FALSE)
+# write.table(cbind(Rolling_time_month,q_diag_month),'meanvarianceunknown/year4/q_diag_month.txt',row.names = FALSE)
 
  #########3yearsSR
-global<-read.table('meanvarianceunknown/year4/resultday.txt',head=TRUE)
+global<-read.table('meanvarianceunknown/year4/resultday1.txt',head=TRUE)
 
 
 f<-function(x){
