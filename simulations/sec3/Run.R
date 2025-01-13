@@ -20,6 +20,3 @@ source('readasymp.R')
 
 ##use python plot the figures
 
-x=(1:10000)/100
-min(1/sqrt(1+x/3)-(1-x))
-

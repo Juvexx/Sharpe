@@ -28,7 +28,7 @@ half_p=p/2
 if(y==0.5){
 case='c<1'
 listlambda=c(0.01,0.05,0.1,(1:30)/5)
-mu=read.table(paste('asset/c<1/mubasen',as.character(n), '.txt',sep=''), header = FALSE,  sep = '',  stringsAsFactors = FALSE)[,1]
+mu=read.table(paste('asset/c<1/mubasen',as.character(n), '.txt',sep=''), header = TRUE,  sep = '',  stringsAsFactors = FALSE)[,1]
 True_sigma=read.table(paste('asset/c<1/sigmabasen',as.character(n), '.txt',sep=''), header = TRUE,  sep = '',  stringsAsFactors = FALSE)
 Store=eigen(as.matrix(True_sigma))
 True_sigma<-Store$vectors %*%diag(Store$values)%*%t(Store$vectors )
