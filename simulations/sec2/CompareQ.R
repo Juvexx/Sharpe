@@ -1,4 +1,6 @@
-#########sigma=sigma[sigma>0.1][1:p], mu
+####This is the simulation code for Appendix A.1, the comparison of Qb
+#### The results will be stored into the Q folder
+
 library(Rcpp)
 library(RcppEigen)
 library(microbenchmark)
@@ -23,19 +25,19 @@ p=n*y
 half_p=p/2
 
 if(y==0.5){
-case='small'
+case='c<1'
 listlambda=c(0.01,0.05,0.1,(1:30)/5)
-mu=read.table('asset/small/mubasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)[,1]
-True_sigma=read.table('asset/small/sigmabasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)
+mu=read.table('asset/c<1/mubasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)[,1]
+True_sigma=read.table('asset/c<1/sigmabasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)
 Store=eigen(as.matrix(True_sigma))
 True_sigma<-Store$vectors %*%diag(Store$values)%*%t(Store$vectors )
 True_Sigma_half<-Store$vectors %*%diag(sqrt(Store$values))%*%t(Store$vectors )
 Inverse_true<-Store$vectors %*%diag(1/(Store$values))%*%t(Store$vectors )}
 else{
-case='large'
+case='c>1'
 listlambda=c(0.01,0.2,0.4,(1:30)/1.5)
-mu=read.table('asset/large/mubasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)[,1]
-True_sigma=read.table('asset/large/sigmabasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)
+mu=read.table('asset/c>1/mubasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)[,1]
+True_sigma=read.table('asset/c>1/sigmabasen1500.txt', header = TRUE,  sep = '',  stringsAsFactors = FALSE)
 Store=eigen(as.matrix(True_sigma))
 True_sigma<-Store$vectors %*%diag(Store$values)%*%t(Store$vectors )
 True_Sigma_half<-Store$vectors %*%diag(sqrt(Store$values))%*%t(Store$vectors )

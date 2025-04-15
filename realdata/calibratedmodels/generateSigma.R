@@ -104,9 +104,9 @@ Rolling_time_month=NULL
 Rolling_time=NULL
 listreturn=NULL
 trainset=readdata(SP500,startyear=2004,startmonth=1,endyear=2004,endmonth=1)
-stocksname=colnames(trainset )
+stocksname=colnames(trainset)
 set.seed(1997)
-
+i=1
 for (i in 0:221){
   cat('\n ')
   cat(i)

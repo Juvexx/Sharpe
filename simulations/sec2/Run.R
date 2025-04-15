@@ -1,4 +1,5 @@
 source('generate.R')
+
 library(Rcpp)
 library(RcppEigen)
 library(microbenchmark)
@@ -17,7 +18,7 @@ sourceCpp(file = "MatrixEigenVa.cpp", verbose = TRUE, rebuild = TRUE)
 
 
 
-
+source('basic.R')
 
 for (i in 2:4){
 if (i==2) {

@@ -1,6 +1,6 @@
-############part1
-#########p=2000,n=3000,alpha0=beta0=1,sigma=sqrt(rgamma(2*p ,alpha0,beta0))
-#########sigma=sigma[sigma>0.1][1:p], mu
+####This is the simulation code for Appendix A.1, the comparison of mu
+#### The results will be stored into the mu folder
+
 library(Rcpp)
 library(RcppEigen)
 library(microbenchmark)

@@ -1,6 +1,9 @@
-############part1
-#########p=2000,n=3000,alpha0=beta0=1,sigma=sqrt(rgamma(2*p ,alpha0,beta0))
-#########sigma=sigma[sigma>0.1][1:p], mu
+
+####This is the simulation code for Section 4.1, the basic settings
+#### The results will be stored into the Basecase folder
+
+
+################3
 library(Rcpp)
 library(RcppEigen)
 library(microbenchmark)
@@ -13,8 +16,7 @@ sourceCpp(file = "MatrixMult.cpp", verbose = TRUE, rebuild = TRUE)
 sourceCpp(file = "MatrixSolver.cpp", verbose = TRUE, rebuild = TRUE)
 sourceCpp(file = "MatrixInv.cpp", verbose = TRUE, rebuild = TRUE)
 sourceCpp(file = "MatrixEigenVa.cpp", verbose = TRUE, rebuild = TRUE)
-n=500
-y=1.5
+
 
 set.seed(1997)
 for (n in c(500,1000,1500,2000)){

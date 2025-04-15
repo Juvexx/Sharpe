@@ -1,7 +1,18 @@
-############part1
-#########p=2000,n=3000,alpha0=beta0=1,sigma=sqrt(rgamma(2*p ,alpha0,beta0))
-#########sigma=sigma[sigma>0.1][1:p], mu
+####This is the simulation code for Appendix A.1, the comparison of bSigma
+#### The results will be stored into the Sigma folder
 
+library(Rcpp)
+library(RcppEigen)
+library(microbenchmark)
+
+
+
+# Use Rcpp attributes -----------------------------------------------------
+
+sourceCpp(file = "MatrixMult.cpp", verbose = TRUE, rebuild = TRUE)
+sourceCpp(file = "MatrixSolver.cpp", verbose = TRUE, rebuild = TRUE)
+sourceCpp(file = "MatrixInv.cpp", verbose = TRUE, rebuild = TRUE)
+sourceCpp(file = "MatrixEigenVa.cpp", verbose = TRUE, rebuild = TRUE)
 
 
 n=1500

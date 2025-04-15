@@ -1,3 +1,6 @@
+
+###This code is used to generate the true parameters for the simulation in the paper
+#### The true parameter is stored into the asset folder
 library(MASS)
 Schmid<-function(alpha){
   n<-dim(alpha)[1]

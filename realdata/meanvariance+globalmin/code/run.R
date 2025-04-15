@@ -1,5 +1,6 @@
-#example:
+#This is the main script to run all the code in the project.
 
+source('readdata.R')
 
 source('code/globalmin/minglobalyear1Q1.R')
 source('code/globalmin/minglobalyear2Q1.R')

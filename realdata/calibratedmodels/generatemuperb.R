@@ -65,8 +65,21 @@ write.csv(cbind(Rolling_time_month,listmuperb),'data/mutrueperb0.05.csv',row.nam
 
 
 
+year=2001
+month=1
+day=1
+train_month_Sigma=12
 
-rho=0.2
+test_month=1
+Result_day=NULL
+One=rep(1,365)%*%t(rep(1,365))
+startdate=ymd(year*10000+month*100+day)
+listmuperb=NULL
+Rolling_time_day=NULL
+Rolling_time_month=NULL
+
+Rolling_time=NULL
+
 for (i in 0:257){
   cat('\n ')
   cat(i)
@@ -115,6 +128,20 @@ write.csv(cbind(Rolling_time_month,listmuperb),'data/mutrueperb0.2.csv',row.name
 
 
 
+year=2001
+month=1
+day=1
+train_month_Sigma=12
+
+test_month=1
+Result_day=NULL
+One=rep(1,365)%*%t(rep(1,365))
+startdate=ymd(year*10000+month*100+day)
+listmuperb=NULL
+Rolling_time_day=NULL
+Rolling_time_month=NULL
+
+Rolling_time=NULL
 
 rho=0.4
 for (i in 0:257){
