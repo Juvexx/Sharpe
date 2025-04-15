@@ -4,19 +4,18 @@
 It consists of experiments with synthetic data and real data. In the folder simuations, it contains all the code for simulation results; In the folder real data, it contains all the code for real data experiment results. Users may pay attention to the working directory. The working directory should be "Sharpe/simulations/sec2/" or "Sharpe/realdata/efficientfrontier/". 
 
 Each subsection has independent working environment.
+
 ### Environment and Setup
 We use R, Anaconda to conduct simulation. C++ is only applied to accelerate the speed. Researchers may use R to do the matrix manupulations, but it will have a slower speed.
 
-We use vscode to run experiments
-directory
-Researchers may download the folders on the github to maintain the same directory.
+We use vscode to run experiments. Researchers may download the folders on the github to maintain the same directory.
 
 
 
 Versions: 
 R 4.4.1 Anaconda 24.7.1 clang 1500.3.9.4
 
-> sessionInfo()
+### sessionInfo()
 R version 4.4.1 (2024-06-14)
 Platform: aarch64-apple-darwin20
 Running under: macOS Sonoma 14.6.1
