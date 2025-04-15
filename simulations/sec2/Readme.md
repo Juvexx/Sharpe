@@ -15,7 +15,7 @@ Expected time:
 
 "comparemu.R", 4h
 
-"compareQ.R", 4h
+"compareQ.R", 6h
  
 "comparesigma.R", 4h
  
