@@ -1,6 +1,6 @@
 This is the working directory. The main file is "run.R", the code files are "basic.R", "comparemu.R", "compareQ.R", and "comparesigma.R". 
 
-Run the code and "compareunknown.R" and get results for Appendix A.2.
+Run the code "compareunknown.R" and get results for Appendix A.2.
 
 The file readasymp.R will analyze the stored results from the code above and store the analyzed results into the folder asymp.
 
