@@ -21,3 +21,5 @@ Expected time:
  
 "compareunknown.R", 4h
 
+"optimizefullQ.R" and "optimizediagQ.R", 2h
+
