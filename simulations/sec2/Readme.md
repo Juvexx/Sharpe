@@ -23,3 +23,4 @@ Expected time:
 
 "optimizefullQ.R" and "optimizediagQ.R", 2h
 
+The long time is mainly due to the 1000 repetitions. 
