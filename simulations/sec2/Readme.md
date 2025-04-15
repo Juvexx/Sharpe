@@ -13,13 +13,13 @@ Expected time:
 
 "basic.R", 3h
 
-"comparemu.R", 4h
+"comparemu.R", 5h
 
-"compareQ.R", 6h
+"compareQ.R", 13h
  
-"comparesigma.R", 4h
+"comparesigma.R", 5h
  
-"compareunknown.R", 4h
+"compareunknown.R", 5h
 
 "optimizefullQ.R" and "optimizediagQ.R", 2h
 
