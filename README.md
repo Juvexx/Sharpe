@@ -49,25 +49,28 @@ Run the file optimizefullQ.R and optimizediagQ.R and get results in Appendix A.3
 
 The figures are obtaibed by plotmu.py, plotsigma.py etc.
 #### Section 4.2
-Set the working directory to Simulations/sec3
+Set the working directory to Simulations/sec3.
 Run the file run.R, and then run plotbase.py plotasymp.py to obtain figures.
 
 
 
 ### Real data Experiments.
 ### Global min, meanvariance with/without known mu
-Set the working directory to Realdata/meanvariance+globalmin
-Run.R code in the folder "code", we will get all the results in Section 5.1, Appendix B.1 and Appendix B.3. Each code corresponds to one situation.
+Set the working directory to Realdata/meanvariance+globalmin. 
+Running Run.R code in the folder "code", we will get all the results in Section 5.1, Appendix B.1 and Appendix B.3. 
 
 Then we can run .py code to obtain the figures.
+
 ### Efficient frontier
-Set the working directory to Realdata/efficientfrontier
+Set the working directory to Realdata/efficientfrontier. 
 There is a run.R in the folder "code". Directly run the code in run.R, then run py file to obtain figures in Section 5.2.
 
 
 ### Calibrated models
 Set the working directory to Realdata/calibratedmodels Directly run the code in run.R, then run the py file in the folder "code" to obtain figures in Appendix B.2.
 
+
+For each specific cases, readers may refer to the Readme.md inside the folders for details.
 
 
 
