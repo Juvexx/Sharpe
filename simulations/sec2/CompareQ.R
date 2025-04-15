@@ -43,13 +43,13 @@ True_sigma<-Store$vectors %*%diag(Store$values)%*%t(Store$vectors )
 True_Sigma_half<-Store$vectors %*%diag(sqrt(Store$values))%*%t(Store$vectors )
 Inverse_true<-Store$vectors %*%diag(1/(Store$values))%*%t(Store$vectors )}
 QQ1=diag(c(rep(3,half_p),rep(1,p-half_p)))
-QQ2=diag(diag(True_sigma)-2)
+QQ2=True_sigma
 lambda_s=0.1
 SRmax=sqrt(t(mu)%*%Inverse_true%*%mu)
 for (i in 1:2){
 if (i==1){
   choice='Q1'
-  Q0else=0.1*QQ1 #fixed value added to \hSigma
+  Q0else=0*QQ1 #fixed value added to \hSigma
   Q0=QQ2  #(\hSigma+Q0else+lbd*Q0)
 }
 else{
@@ -58,8 +58,9 @@ else{
   Q0=QQ1 #(\hSigma+Q0else+lbd*Q0)
 }
 
-Q0_inverse_half=diag((diag(Q0))^{-0.5})
-Q0_inverse=diag((diag(Q0))^{-1})
+StoreQ=eigen(as.matrix(Q0))
+Q0_inverse_half<-StoreQ$vectors %*%diag(1/sqrt(StoreQ$values))%*%t(StoreQ$vectors )
+Q0_inverse<-StoreQ$vectors %*%diag(1/(StoreQ$values))%*%t(StoreQ$vectors )
 
 
 for (repeat0 in 1:1000){
@@ -75,6 +76,10 @@ Estimate_sigma<<-MatrixMultC(t(X),X)/n
 filename=paste('Q/',case,'/',choice,'repeat',repeat0,'.csv',sep='')
 
 
+
+# This is the simple algebra to avoid calculate inverse matrix (hbSigma+Q0else+lbdQ0)^{-1} for each lbd. 
+# The main idea is (hbSigma+Q0else+lbdQ0)^{-1} can be transfered into Q1(someA+lbd I)^{-1}Q1, and we can use use eigen onetime to obtain all the inverse matrices with different lbd. 
+  
 Qhalf_hSigma_Qhalf=MatrixMultC(MatrixMultC(Q0_inverse_half,Estimate_sigma+Q0else),Q0_inverse_half) #Q^(-0.5)%*%hatSigma%*%Q^(-0.5)
 
 store=eigen(Qhalf_hSigma_Qhalf)
