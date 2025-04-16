@@ -1,6 +1,5 @@
-############part1
-#########p=2000,n=3000,alpha0=beta0=1,sigma=sqrt(rgamma(2*p ,alpha0,beta0))
-#########sigma=sigma[sigma>0.1][1:p], mu
+############ This is the code for Section 4.2. 
+############ The results are stored in the folder Basecase folder.
 library(Rcpp)
 library(RcppEigen)
 library(microbenchmark)
