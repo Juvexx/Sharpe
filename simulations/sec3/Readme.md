@@ -7,5 +7,4 @@ All the python files here are written to plot the figures in the paper.
 
 Expected time:
 
-"basic.R": 3h
 "mucase.R": 3h
