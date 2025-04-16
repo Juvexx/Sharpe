@@ -47,7 +47,7 @@ Run the file Compareunknownmu.R and get results of unknownmu in Appendix A.2
 
 Run the file optimizefullQ.R and optimizediagQ.R and get results in Appendix A.3
 
-The figures are obtaibed by plotmu.py, plotsigma.py etc.
+The figures are obtained by plotmu.py, plotsigma.py etc.
 #### Section 4.2
 Set the working directory to Simulations/sec3.
 Run the file run.R, and then run plotbase.py plotasymp.py to obtain figures.
