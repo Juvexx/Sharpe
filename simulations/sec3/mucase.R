@@ -109,7 +109,7 @@ Inverse_true<-MatrixMultC(Store$vectors ,MatrixMultC(diag(1/(Store$values)),t(St
 # }
 
 
-for (repeat0 in 1:2){
+for (repeat0 in 1:1000){
 cat(repeat0)
 Z=rnorm(n*p)
 Z=matrix(Z,nrow=n)
