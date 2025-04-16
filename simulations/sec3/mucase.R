@@ -1,4 +1,5 @@
-###### This is the code for the Section 4.2.1
+###### This is the code for the Section 4.2
+###### The results for different mu are stored into folder mu3 and mu4 respectively.
 
 library(Rcpp)
 library(RcppEigen)
